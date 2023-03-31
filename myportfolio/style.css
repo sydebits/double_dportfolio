@@ -28,14 +28,11 @@ section {
   min-height: 100vh;
   padding: 10rem 9% 2rem;
 }
-li {
-  list-style-type: none;
-  display: inline-block;
-}
+
 a {
   color: var(--text-color);
 }
-/****************The header***************/
+/****************The header ***************/
 .container {
   position: fixed;
   top: 0;
@@ -45,9 +42,8 @@ a {
   align-items: center;
   justify-content: space-between;
   z-index: 100;
-  padding: 2rem 10%;
+  padding: 2rem 9%;
   background-color: var(--bg-color);
-  
 }
 .container.sticky {
   border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
@@ -58,21 +54,21 @@ a {
   align-items: center;
   cursor: default;
   opacity: 0;
+  font-weight: 600;
   animation: slideRight 1s ease forwards;
 }
 .img-logo {
   width: 3rem;
   margin-right: 2rem;
 }
-.navlinks li {
-  margin-left: 4rem;
+
+.navbar a {
   font-size: 1.7rem;
-}
-.navlinks a {
+  margin-left: 4rem;
   transition: 0.1s;
 }
-.active,
-ul a:hover {
+a.active,
+a:hover {
   color: var(--main-color);
 }
 /**************** MENU ****************/
@@ -80,13 +76,14 @@ ul a:hover {
   font-size: 3.6rem;
   display: none;
   color: var(--text-color);
+  padding-right: 4rem;
 }
 
 /**************** Main Landing Page ****************/
 .hero {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 .hero::before {
   position: absolute;
@@ -127,7 +124,7 @@ ul a:hover {
   }
 }
 .hero-content {
-  max-width: 600px;
+  max-width: 90rem;
 }
 .hero-content h3 {
   font-size: 3.2rem;
@@ -149,8 +146,7 @@ span {
   margin: 0.9rem 0;
 }
 .hero-image img {
-  height: 60rem;
-  margin-right: -2rem;
+  width: 35vw;
 }
 /**************** Social Media Design ****************/
 .social-media a {
@@ -212,9 +208,9 @@ span {
 .about-img img {
   width: 50rem;
 }
-.about-img {
+/* .about-img  {
   width: 35vw;
-}
+} */
 .heading {
   text-align: center;
   font-size: 4.5rem;
@@ -232,6 +228,7 @@ span {
 }
 /**************** SKILLS SECTION ****************/
 .skills h2 {
+  margin-top: 15rem;
   margin-bottom: 5rem;
 }
 .skills-container {
@@ -244,7 +241,7 @@ span {
 .skills-container .skills-box {
   flex: 1 1 30rem;
   background: var(--second-bg-color);
-  padding: 5rem 2rem 4rem;
+  padding: 3rem 2rem 4rem;
   text-align: center;
   border-radius: 2rem;
   border: 0.2rem solid var(--bg-color);
@@ -267,15 +264,7 @@ span {
 }
 /**************** PORTFOLIO SECTION ****************/
 .portfolio {
-  background-color: var(--second-bg-color);
-}
-.portfolio-box img {
-  width: 100%;
-  height: 37rem;
-  transition: 0.5s ease;
-}
-.portfolio-box:hover img {
-  transform: scale(1.1);
+  background: var(--second-bg-color);
 }
 .portfolio h2 {
   margin-bottom: 4rem;
@@ -293,13 +282,21 @@ span {
   overflow: hidden;
   display: flex;
 }
-.portfolio-container .portfolio-layer {
+.portfolio-box img {
+  width: 100%;
+  height: 37rem;
+  transition: 0.5s ease;
+}
+.portfolio-box:hover img {
+  transform: scale(1.1);
+}
+.portfolio-box .portfolio-layer {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+  background: linear-gradient(rgba(0, 0, 0, 0.1), #88700e);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -310,7 +307,7 @@ span {
   transition: 0.5 ease;
 }
 .portfolio-box:hover .portfolio-layer {
-  transform: translateY(0);
+  transform: translateX(0);
 }
 .portfolio-layer h4 {
   font-size: 3rem;
@@ -341,6 +338,11 @@ span {
   margin: 1rem auto;
   text-align: center;
   margin-bottom: 3rem;
+}
+.contact form .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .contact form .input-box input,
 .contact form textarea {
@@ -391,40 +393,119 @@ span {
   color: var(--second-bg-color);
 }
 /**************** BREAKPOINT SECTION ****************/
-@media(max-width: 1200px){
-    html{
-        font-size: 55%;
-    }
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
 }
-@media(max-width: 991px){
-    .container{
-        padding: 2rem 3%;
-    }
-    section{
-        padding: 10rem 3% 2rem;
-    }
-    .footer{
-        padding: 2rem 3%;
-    }
+@media (max-width: 991px) {
+  .container {
+    padding: 2rem 3%;
+  }
+  section {
+    padding: 10rem 3% 2rem;
+  }
+  .skills {
+    padding-bottom: 7rem;
+  }
+  .portfolio {
+    min-height: auto;
+  }
+  .contact{
+    padding-bottom: 7rem;
+  }
+  .footer {
+    padding: 2rem 3%;
+  }
 }
-@media(max-width: 768px){
-    #menu-icon{
-        display: block;
-    
-    }
-    ul{
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100;
-        padding: 1rem 3%;
-        background: var(--bg-color);
-        border-top: .1rem solid rgba(0, 0, 0, .2);
-        box-shadow: 0.5rem 1rem rgba(0, 0, 0, .2);
-    }
-    ul a{
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-    }
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: var(--bg-color);
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    display: none;
+  }
+  .navbar.active {
+    display: block;
+  }
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+  .hero {
+    flex-direction: column;
+  }
+  .hero-content h3 {
+    font-size: 2.6rem;
+  }
+  .hero-content h1 {
+    font-size: 5rem;
+  }
+  .hero-image img {
+    width: 70vw;
+    margin-top: 4rem;
+  }
+  .about {
+    flex-direction: column-reverse;
+  }
+  .about-img {
+    width: 70vw;
+    margin-top: 4rem;
+  }
+  .skills h2 {
+    margin-bottom: 3rem;
+  }
+  .portfolio h2 {
+    margin-bottom: 3rem;
+  }
+  .portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 617px){
+  .portfolio-container{
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 450px){
+  html{
+    font-size: 50%;
+  }
+  .contact form .input-box input{
+    width: 100%;
+  }
+}
+@media (max-width: 365px){
+  .hero-image img {
+    width: 90vw;
+  }
+
+  .about-img img{
+    width: 90vw;
+
+  }
+  .hero::before{
+    display: none;
+  }
+
+  .hero::after{
+    display: none;
+  }
+  .footer{
+    flex-direction: column-reverse;
+  }
+  .footer p{
+    text-align: center;
+    margin-top: 2rem;
+  }
 }
