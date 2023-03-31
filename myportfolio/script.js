@@ -47,8 +47,8 @@ window.onscroll = () => {
   header.classList.toggle("sticky", window.scrollY > 100);
 
   /**************Menu Icon toggle off when Clicked*******************/
-  // menuIcon.classList.toggle("bx-x");
-  // navbar.classList.toggle("active");
+  menuIcon.classList.toggle("bx-x");
+  navbar.classList.toggle("active");
 };
 
 /**************Scroll Reveal*******************/
