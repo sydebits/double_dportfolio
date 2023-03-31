@@ -206,11 +206,11 @@ span {
   background-color: var(--second-bg-color);
 }
 .about-img img {
-  width: 50rem;
+  width: 40rem;
 }
-.about-img  {
+/* .about-img img {
   width: 35vw;
-}
+} */
 .heading {
   text-align: center;
   font-size: 4.5rem;
